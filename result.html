@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CLAT 2025 – Score Card</title>
+
+  <script>
+    if (sessionStorage.getItem("auth") !== "ok") {
+      location.replace("index.html");
+    }
+  </script>
+
+  <style>
+    body {
+      background: #f0f0f0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .outer {
+      width: 860px;
+      margin: 30px auto;
+      background: white;
+      border: 3px solid #2a6ebb;
+      padding: 8px;
+    }
+
+    .inner {
+      border: 2px solid #2a6ebb;
+      padding: 15px;
+    }
+
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #2a6ebb;
+      padding-bottom: 10px;
+    }
+
+    .header h2 {
+      margin: 0;
+      color: #b30000;
+      font-size: 18px;
+    }
+
+    .header p {
+      margin: 4px 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .score-title {
+      text-align: center;
+      font-size: 18px;
+      margin: 15px 0;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      font-size: 14px;
+    }
+
+    td {
+      padding: 6px;
+      vertical-align: top;
+    }
+
+    .photo img {
+      width: 135px;
+      height: 165px;
+      border: 1px solid #000;
+    }
+
+    .instructions {
+      margin-top: 40px;
+      font-size: 13px;
+    }
+
+    .instructions h3 {
+      margin-bottom: 10px;
+    }
+
+    .instructions ul {
+      margin-left: 20px;
+    }
+
+    .print-btn {
+      display: block;
+      margin: 15px auto;
+      padding: 8px 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    @media print {
+      .print-btn { display: none; }
+      body { background: white; }
+    }
+  </style>
+</head>
+
+<body>
+
+<button class="print-btn" onclick="window.print()">Print Score Card</button>
+
+<div class="outer">
+  <div class="inner">
+
+    <div class="header">
+      <h2>CONSORTIUM OF NATIONAL LAW UNIVERSITIES</h2>
+      <p>COMMON LAW ADMISSION TEST (CLAT)</p>
+      <p>(Admission to UG Programme)</p>
+    </div>
+
+    <div class="score-title">Score Card</div>
+
+    <table>
+      <tr>
+        <td width="70%">
+          <table>
+            <tr><td><b>Application No.</b></td><td>: U25000823</td></tr>
+            <tr><td><b>Admit Card No.</b></td><td>: 131011208</td></tr>
+            <tr><td><b>Candidate Name</b></td><td>: GURJOT SINGH</td></tr>
+            <tr><td><b>Date of Birth</b></td><td>: 07-08-2007</td></tr>
+            <tr><td><b>Marks Obtained</b></td><td>: 86.75</td></tr>
+            <tr><td><b>All India Rank</b></td><td>: 879</td></tr>
+          </table>
+        </td>
+
+        <td width="30%" align="center" class="photo">
+          <img src="student.jpg">
+          <div style="font-size:12px;">Candidate Photograph</div>
+        </td>
+      </tr>
+    </table>
+
+    <!-- INSTRUCTIONS -->
+    <div class="instructions">
+      <h3>Important Instructions</h3>
+      <ul>
+        <li>The first round of counselling will commence from <b>01 January 2026</b>.</li>
+        <li>Candidates must register for counselling separately on the official CLAT portal.</li>
+        <li>Allotment of seats will be strictly based on merit and preference.</li>
+        <li>Failure to complete counselling formalities within the stipulated time may result in cancellation.</li>
+        <li>This score card is for information purposes only.</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

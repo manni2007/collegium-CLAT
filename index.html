@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CLAT 2025 – Score Card</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #333;
+    }
+
+    .container {
+      width: 520px;
+      margin: 80px auto;
+    }
+
+    h2 {
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    label {
+      font-size: 13px;
+      color: #666;
+    }
+
+    input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #999;
+      padding: 8px 5px;
+      font-size: 14px;
+      margin-bottom: 25px;
+      outline: none;
+    }
+
+    .btn {
+      border: 2px solid #b30000;
+      background: white;
+      color: #b30000;
+      padding: 8px 18px;
+      font-size: 13px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .btn:hover {
+      background: #b30000;
+      color: white;
+    }
+
+    .error {
+      color: red;
+      margin-top: 15px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h2>Score Card for CLAT 2025</h2>
+
+  <p>
+    If you have not printed your score card, you can either download it by
+    logging into your account OR you can download here by providing your
+    registration number and date of birth which you had entered in your
+    application form.
+  </p>
+
+  <br>
+
+  <label>CLAT Application Number / Admit Card Number</label>
+  <input type="text" id="roll"
+         placeholder="CLAT Application Number / Admit Card Number">
+
+  <label>Date of Birth</label>
+  <!-- CALENDAR INPUT -->
+  <input type="date" id="dob">
+
+  <button class="btn" onclick="checkResult()">PRINT SCORE CARD</button>
+
+  <div class="error" id="error"></div>
+
+</div>
+
+<script>
+function checkResult() {
+  var roll = document.getElementById("roll").value;
+  var dob  = document.getElementById("dob").value;
+
+  // dob format will be YYYY-MM-DD
+  if (roll === "131011208" && dob === "2007-08-07") {
+    sessionStorage.setItem("auth", "ok");
+    window.location.href = "result.html";
+  } else {
+    document.getElementById("error").innerText =
+      "Invalid Application Number / Date of Birth";
+  }
+}
+</script>
+
+</body>
+</html>
